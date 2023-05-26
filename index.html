@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>vue-slider</title>
+</head>
+<body>
+    <div id="app">
+        <div id="container">
+            <img :src="slides[activeImage].image" alt="">
+            <div class="text">
+                <h2>{{slides[activeImage].title}}</h2>
+                <span>{{slides[activeImage].text}}</span>
+            </div>
+            <div class="thumb">
+                <div>
+                    <img v-for="(img, index) in slides" 
+                    :src="img.image" :class="activeImage === index ? 'active' : ''">
+                </div>
+                <div id="prev" @click="prevImage">
+                    <i class="fa-solid fa-angle-up"></i> 
+                </div>
+                <div id="next" @click="nextImage">
+                    <i class="fa-solid fa-angle-down"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

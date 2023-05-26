@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app{
+    height: 100vh;
+    align-items: center;
+    display: flex;
+    position: relative;
+    padding: 0 15%;
+}
+
+
+#next, #prev{
+    position: absolute;
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+
+#prev{
+    top: 0;
+}
+
+#next{
+    bottom: 0;
+}
+
+.text{
+position: absolute;
+width: 55%;
+height: 5%;
+right: 25%;
+bottom: 21%;
+color: rgb(245, 245, 245);
+}
+
+#container {
+    height: 516px;
+    width: 70%;
+    position: absolute;
+    overflow: hidden;
+}
+
+
+.thumb{
+    width: 200px;
+    height: 513px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.thumb div{
+    height: calc((100%/ 5) - 3px);
+}
+
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.active {
+    border: 5px solid rgb(129, 129, 129);
+}
+
